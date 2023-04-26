@@ -1,0 +1,12 @@
+
+    getDocs(collectionRef).then((snapShot)=>{
+    let books=[];
+    // snapShot.docs.forEach((doc)=>{
+    //   books.push(doc.data())
+
+    // })
+    snapShot.docs.map((doc)=>{
+      books.push({...doc.data(),id:doc.id})
+    })
+    console.log(books)
+    })
